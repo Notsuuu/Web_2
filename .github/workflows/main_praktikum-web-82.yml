@@ -33,6 +33,10 @@ jobs:
           npm install
           npm run build
 
+      - name: Install PHP dependencies
+        run: composer install --no-dev --optimize-autoloader
+
+
       - name: Check if composer.json exists
         uses: andstor/file-existence-action@v1
         with:
